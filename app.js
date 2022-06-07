@@ -5,7 +5,6 @@ const path = require ('path');
 const bodyParser = require ('body-parser');
 const methodOverride = require ('method-override');
 const app = express();
-const flash = require("express-flash");
 const port = process.env.PORT || 3000;
 const { router } = require ('./route');
 app.use(bodyParser.json())
