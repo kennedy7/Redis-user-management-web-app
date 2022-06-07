@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title> RedisUsers Management</title>
+        <link rel= "stylesheet" href ="https://bootswatch.com/5/flatly/bootstrap.min.css">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars-offcanvas/">
+    </head>
+    <body>
+      
+          <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">RedisUsers Management</a>
+          
+        </div>
+        <div id="navbar" class="navbar-brand">
+          <ul class="navbar-brand">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/user/add">Add User</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+     
+    <div class="container">
+        <h1>User details</h1>
+        <ul class="list-group">
+           <h1><%= user.firstname %> <%= user.lastname %> [id: <%= user.id %>]</h1> 
+              <li><strong>Email: </strong><%= user.email %></li>
+              <li><strong>Phone: </strong><%= user.phone %></li>
+          </ul>
+          <a class="btn btn-default" href="/">Back</a>
+      
+    </div>
+    </body>
+</html>
+
+
