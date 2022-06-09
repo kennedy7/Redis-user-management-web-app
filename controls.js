@@ -1,4 +1,5 @@
 const { client} =  require ('./redisConfig')
+const flash = require ('flash')
 exports.SearchUser = async (req, res, next) => {
     try {
         let id = req.body.id;
