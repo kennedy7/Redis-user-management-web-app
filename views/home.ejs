@@ -5,6 +5,15 @@
          <title> RedisUsers Management</title>
         <link rel= "stylesheet" href ="https://bootswatch.com/5/flatly/bootstrap.min.css">
         <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/navbars-offcanvas/">
+        <style>
+        ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #58d2b2;
+  }
+  
+          </style>
     </head>
     <body>
       
@@ -28,14 +37,15 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <ul>
-      <% if(messages.success_msg) { %>
-      <li><%= messages.success_msg %></li>
-      <% } %>
-    </ul> 
+   
     <div class="container">
         <h1>Search Users</h1>
         <form method="post" action="/users/search">
+          <ul class="flash">
+            <% if(messages.success_msg) { %>
+            <li><%= messages.success_msg %></li>
+            <% } %>
+          </ul> 
         <div class="form-group">
             <input type="text" name="id" class="form control" placeholder="Search users by ID" required/>
         </div>

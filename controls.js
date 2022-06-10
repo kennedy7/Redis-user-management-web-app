@@ -1,5 +1,4 @@
 const { client} =  require ('./redisConfig')
-const flash = require ('flash')
 exports.SearchUser = async (req, res, next) => {
     try {
         let id = req.body.id;
@@ -51,4 +50,10 @@ exports.Adduser = async (req, res, next)=>{
       catch(err){
           next(err)
       }
+}
+
+exports.DeleteUser = (req, res, next)=>{
+    client.del(req.params.id);
+    req.flash("success_msg", "user deleted successfully")
+    res.redirect('/');
 }

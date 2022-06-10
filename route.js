@@ -1,5 +1,5 @@
 const express = require("express");
-const { SearchUser, Adduser } = require("./controls");
+const { SearchUser, Adduser, DeleteUser } = require("./controls");
 router = express.Router()
 
 router.get('/', (req, res)=>{
@@ -15,6 +15,7 @@ router.get('/user/add', (req, res)=>{
     res.render ('adduser' )
 })
 router.post('/user/add', Adduser)
+router.delete('/user/delete/:id', DeleteUser)
 
 
 module.exports = { router };
